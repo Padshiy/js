@@ -1,0 +1,39 @@
+<!-- Создайте функцию find(arr, value), 
+которая ищет в массиве arr значение value и 
+возвращает его номер, если найдено, или -1, 
+если не найдено. -->
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="array-task6.js"></script>
+</head>
+
+<body>
+
+    <script>
+        arr = ["test", 2, 1.5, false];
+
+        function find(arr, value) {
+            var position = -1;
+
+            for (var i = 0; i < arr.length; i++) {
+
+                if (arr[i] === value) {
+                    position = i;
+                }
+            }
+
+            return position;
+        }
+
+        alert(find(arr, 0));
+    </script>
+
+</body>
+
+</html>

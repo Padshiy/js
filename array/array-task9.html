@@ -1,0 +1,37 @@
+<!--Задача – найти непрерывный подмассив arr, сумма элементов которого максимальна.
+
+Ваша функция должна возвращать только эту сумму.-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="array-task9.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function getMaxSubSum(array) {
+            var maxSum = 0;
+            var sum = 0;
+
+            for (var i = 0; i < array.length; i++) {
+                sum += array[i];
+
+                maxSum = Math.max(maxSum, sum);
+
+                if (sum < 0) {
+                    sum = 0;
+                }
+
+            }
+
+            return maxSum;
+        }
+    </script>
+
+</body>
+
+</html>
