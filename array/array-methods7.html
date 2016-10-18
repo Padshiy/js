@@ -1,0 +1,26 @@
+<!--Используйте функцию sort для того, чтобы «перетрясти» элементы массива в случайном порядке.-->
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <script>
+        function randomNumeric(a, b) {
+            return Math.random() - 0.5;
+        }
+        var arr = [1, 2, 3, 4, 5];
+
+        arr.sort(randomNumeric);
+
+        alert(arr); // 8, 5, 2, 1, -10
+    </script>
+
+</body>
+
+</html>

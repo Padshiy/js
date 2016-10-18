@@ -1,0 +1,42 @@
+<!--На входе массив чисел, например: arr = [1,2,3,4,5].
+
+Напишите функцию getSums(arr), которая возвращает массив его частичных сумм.
+
+Иначе говоря, вызов getSums(arr) должен возвращать новый массив из такого же числа элементов, в котором на каждой позиции должна быть сумма элементов arr до этой позиции включительно.-->
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="array-iteration.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function getSums(arr) {
+            var newArr = [];
+
+            if (!arr.length) return newArr;
+
+            var result = arr.reduce(function (sum, current) {
+                newArr.push(sum);
+                return sum + current;
+            });
+
+            newArr.push(result);
+
+            return newArr;
+        }
+
+        arr = [1, 2, 3, 4, 5];
+
+        alert(getSums([1, 2, 3, 4, 5]));
+    </script>
+
+</body>
+
+</html>

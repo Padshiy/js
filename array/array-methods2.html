@@ -1,0 +1,33 @@
+<!--Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+
+То есть, дефисы удаляются, а все слова после них получают заглавную букву.-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="array-methods2.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function camelize(str) {
+            var newString = str.split('-');
+
+            for (var i = 1; i < newString.length; i++) {
+                newString[i] = newString[i].charAt(0).toUpperCase() + newString[i].slice(1);
+            }
+
+            str = newString.join('');
+
+            return str;
+        }
+
+        alert(camelize("background-color"));
+    </script>
+
+</body>
+
+</html>

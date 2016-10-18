@@ -1,0 +1,56 @@
+<!--В объекте есть свойство className, которое содержит список «классов» – слов, разделенных пробелом:
+
+var obj = {
+  className: 'open menu'
+}
+
+Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет:-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="array-methods.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function addClass(obj, cls) {
+            var newClass;
+
+            if (obj.className) {
+                newClass = obj.className.split(' ');
+            } else {
+                newClass = obj.className.split('');
+            }
+
+            for (var i = 0; i < newClass.length; i++) {
+
+                if (newClass[i] === cls) {
+
+                    return;
+                }
+            }
+
+            newClass.push(cls);
+
+            obj.className = newClass.join(' ');
+
+            return obj;
+        }
+
+        var obj = {
+            className: ''
+        };
+
+        addClass(obj, 'new');
+
+        alert(obj.className);
+    </script>
+
+</body>
+
+</html>
