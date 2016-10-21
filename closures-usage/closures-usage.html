@@ -1,0 +1,25 @@
+<!--Напишите функцию sum, которая работает так: sum(a)(b) = a+b.-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+
+    </head>
+
+    <body>
+        <script>
+            function sum(a) {
+                var func = function (b) { 
+                    return a + b;
+                };
+                
+                return func;
+            }
+
+            alert ( sum(5)(6) );
+        </script>
+    </body>
+
+</html>

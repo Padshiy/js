@@ -1,0 +1,40 @@
+<!--Задача – реализовать строковый буфер на функциях в JavaScript-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="closures-usege2.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function makeBuffer() {
+            var str = "";
+
+            return function string(value) {
+                if (arguments.length == 0) {
+                    return str;
+                }
+
+                str += value;
+            }
+        }
+
+        var buffer = makeBuffer();
+
+        // добавить значения к буферу
+        buffer('Замыкания');
+        buffer(' Использовать');
+        buffer(' Нужно!');
+
+        // получить текущее значение
+        alert(buffer()); // Замыкания Использовать Нужно!
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!--Напишите функцию getLastDayOfMonth(year, month), которая возвращает последний день месяца.-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="datetime5.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function getLastDayOfMonth(year, month) {
+            var date = new Date(year, month + 1, 0);
+
+            return date.getDate();
+        }
+
+        alert(getLastDayOfMonth(2012, 1));
+    </script>
+
+</body>
+
+</html>

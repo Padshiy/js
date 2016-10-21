@@ -1,0 +1,31 @@
+<!--Создайте объект Date для даты: 20 февраля 2012 года, 3 часа 12 минут.-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+
+    </head>
+
+    <body>
+        <script>
+            var date = new Date(2012, 1, 20, 3, 12);
+            var options = {
+                  era: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                  weekday: 'long',
+                  timezone: 'UTC',
+                  hour: 'numeric',
+                  minute: 'numeric',
+                  second: 'numeric'
+            };
+            
+            
+            alert( date.toLocaleString("ru", options) );
+        </script>
+    </body>
+
+</html>
