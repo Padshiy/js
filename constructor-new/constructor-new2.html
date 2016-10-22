@@ -1,0 +1,47 @@
+<!--Создайте калькулятор-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="constructor-new2.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function Calculator() {
+
+            var methods = {
+                "-": function (a, b) {
+                    return a - b;
+                },
+                "+": function (a, b) {
+                    return a + b;
+                }
+            };
+
+            this.calculate = function (str) {
+
+                var arr = str.split(' ');
+                a = +arr[0];
+                operation = arr[1];
+                b = +arr[2];
+
+                if (!methods[operation] || isNaN(a) || isNaN(b)) {
+                    return NaN;
+                };
+
+                return methods[operation](a, b);
+            };
+
+            this.addMethod = function (name, func) {
+                methods[name] = func;
+            };
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!--Фильтрация через функцию-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="closures-usage5.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function filter(arr, func) {
+            var result = [];
+
+            for (var i = 0; i < arr.length; i++) {
+                var value = arr[i];
+
+                if (func(value)) {
+                    result.push(value);
+                }
+
+            }
+
+            return result;
+        }
+
+        function inBetween(a, b) {
+            return function (x) {
+
+                return x >= a && x <= b;
+            };
+        }
+
+        function inArray(arr) {
+            return function (x) {
+
+                return arr.indexOf(x) != -1;
+            };
+        }
+    </script>
+
+</body>
+
+</html>
