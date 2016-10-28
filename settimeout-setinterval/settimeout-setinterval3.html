@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="settimeout-setinterval3.js"></script>
+</head>
+
+<body>
+
+    <script>
+        function delay(f, ms) {
+
+            return function () {
+
+                var value = this;
+                var arg = arguments;
+
+                setTimeout(function () {
+                    f.apply(value, arg);
+                }, ms);
+
+            };
+        }
+    </script>
+
+</body>
+
+</html>
